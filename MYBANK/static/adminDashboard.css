@@ -1,0 +1,17 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: boder-box;
+}
+header {
+  background-color: red;
+  height: 15vh;
+}
+nav {
+  background-color: green;
+  height: 10vh;
+}
+main {
+  background-color: brown;
+  height: 75vh;
+}

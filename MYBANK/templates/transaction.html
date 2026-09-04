@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/transaction" method="POST">
+        <h1>Deposite / Withdraw</h1>
+        <label for="tt">Transaction Type</label>
+        <select name="t_type" id="tt">
+            <option value="deposite">Deposite</option>
+            <option value="withdraw">Withdraw</option>
+        </select>
+        <input type="text" name="caccno" placeholder="Enter accno:">
+        <input type="text" name="amount" placeholder="Enter amount:">
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

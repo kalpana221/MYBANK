@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit customer details:</h1>
+    <form action="/updateCustomer" method="POST">
+      <input type="text" name="caccno" value="{{customer['accno']}}"/>
+      <input type="text" name="uname" value="{{customer['cname']}}" />
+      <input type="text" name="umobile" value="{{customer['cmobile']}}" />
+      <input type="email" name="uemail" value="{{customer['cemail']}}" />
+      <input type="text" name="upassword" value="{{customer['password']}}" />
+      <button type="submit">update</button>
+    </form>
+</body>
+</html>

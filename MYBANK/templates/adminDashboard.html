@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='adminDashboard.css')}}"
+    />
+  </head>
+  <body>
+    <header><h1>Welcome Admin</h1></header>
+    <nav><h2>Navigation bar</h2>
+    <a href="{{url_for('createCustomerFun')}}"
+    ><button>create Customer</button></a
+    >
+    <a href="{{url_for('makeTransaction')}}">
+      <button>Make Transaction</button>
+    </a>
+    <a href="{{url_for('home')}}">
+      <button>Log Out</button>
+    </a>
+    </nav>
+    <main>
+      <table border="2">
+        <tr>
+          <th>SNO</th>
+          <th>Customer Name</th>
+          <th>Customer Mobile</th>
+          <th>Customer Email</th>
+          <th>Customer AccNo</th>
+          <th>Customer Balance</th>
+          <th colspan="2">Actions</th>
+        </tr>
+        {% for customer in data%}
+        <tr>
+          -
+          <td>{{customer["sno"]}}</td>
+          <td>{{customer["cname"]}}</td>
+          <td>{{customer["cmobile"]}}</td>
+          <td>{{customer["cemail"]}}</td>
+          <td>{{customer["accno"]}}</td>
+          <td>{{customer["balance"]}}</td>
+          <td>
+            <form action="/deleteCustomer/{{customer['accno']}}">
+              <button type="submit">Delete</button>
+            </form>
+            </td>
+          <td>
+            <form action="/editCustomer/{{customer['accno']}}">
+              <button type="submit">Edit</button>
+            </form>
+            </td>
+        </tr>
+        {%endfor%}
+      </table>
+    </main>
+  </body>
+</html>
